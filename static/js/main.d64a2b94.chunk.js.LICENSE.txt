@@ -1,0 +1,7 @@
+//! Everything is imported in App
+
+//! default assets after deleting the stuff we dont need for the project
+
+//! imported "tachyons", a bootstrap-like library for React+CSS
+
+//! imported the App component (final layer) that will be a parrent of CardList and all the rest
