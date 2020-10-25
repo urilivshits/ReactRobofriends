@@ -37,7 +37,7 @@ class App extends Component {
         // console.log(2, "render");
         // console.log(filteredRobots);
         if (this.state.robots.length === 0) {
-            return <h1 className="tc">Loading</h1>
+            return <h2 className="tc">API call returned empty. Seems like the source updated the data structure and I have to update the App.</h2>
         }
         else {
             return (
