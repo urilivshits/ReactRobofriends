@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-// import {robots} from "./robots.js";
+// import {robots} from "../robots.js";
 import CardList from "../components/CardList.js";
 import SearchBox from "../components/SearchBox.js";
 import Scroll from "../components/Scroll.js";
@@ -32,7 +32,8 @@ class App extends Component {
 
     render () {
         const filteredRobots = this.state.robots.filter(robots => {
-            return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+            return (robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase()) || 
+            robots.email.toLowerCase().includes(this.state.searchfield.toLowerCase()));
         });
         // console.log(2, "render");
         // console.log(filteredRobots);
