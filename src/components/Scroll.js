@@ -4,7 +4,7 @@ import "./Scroll.css";
 const Scroll = (props) => {
     // console.log(props);
     return (
-        <div className="removeScrollBar" style={{overflowY: "scroll", height: "900px"}}>
+        <div className="removeScrollBar" style={{overflowY: "scroll", height: "1080px"}}>
             {props.children}
         </div>
     )

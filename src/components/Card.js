@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./Card.css";
 
 //! 1st way - w/o destructuring
 // const Card = (props) => {
@@ -41,7 +42,7 @@ const Card = ({ name, email, id, phone, website, company, address }) => {
     //     return zxc;
     // }
     return (
-        <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} className="tc bg-light-green dib br3 pa3 ma2  bw2 shadow-5">
+        <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} className="card tc bg-light-green dib br3 pa3 ma2  bw2 shadow-5">
             <div className="flex">
                 <div>
                     <img alt="robots" src={`https://robohash.org/${id}.png?size=200x200`}/>
@@ -56,14 +57,12 @@ const Card = ({ name, email, id, phone, website, company, address }) => {
                         <p className="ma0">{company.name}</p>
                         <p className="ma0">{company.bs}</p>
                         <p className="ma0">{phone}</p>
-                        <a className="ma0" href={website}>{website}</a>
+                        <a className="ma0" href={window.location.href}>{website}</a>
                         <p className="b mb1">Address</p>
                         <p className="ma0">{address.street}</p>
                         <p className="ma0">{address.suite}</p>
                         <p className="ma0">{address.city}</p>
                         <p className="ma0">{address.zipcode}</p>
-
-
                     </div>
                 )}
                 {/* {!isShown && (

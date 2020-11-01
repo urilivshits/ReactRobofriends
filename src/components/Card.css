@@ -1,0 +1,4 @@
+.card:hover {
+    background: cornflowerblue;
+    transition: all 5s;
+}
