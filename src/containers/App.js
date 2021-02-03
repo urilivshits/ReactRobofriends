@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import CardList from "../components/CardList.js";
 import SearchBox from "../components/SearchBox.js";
 import Scroll from "../components/Scroll.js";
+import ErrorBoundry from "../components/ErrorBoundry";
 import "./App.css"
 
 //! adding the API to get fake users and adding the Scroll component
@@ -47,7 +48,9 @@ class App extends Component {
                     <SearchBox searchChange={this.onSearchChange} />
                     {/* <CardList robots={this.state.robots}/> */}
                     <Scroll>
-                        <CardList robots={filteredRobots}/>
+                        <ErrorBoundry>
+                            <CardList robots={filteredRobots}/>
+                        </ErrorBoundry>
                     </Scroll>
                 </div>
             )

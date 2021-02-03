@@ -70,6 +70,10 @@ import Card from "./Card.js";
 
 //! looping over the robots with .map() simplified
 const CardList = ({robots}) => {
+    // if (true) {
+    //     throw new Error("NOOOOO");
+    // }
+
     return (
         <div>
             <React.StrictMode>
